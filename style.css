@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+}
+
+.display {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    grid-column: 1 / -1;
+}
+
+#previous-operand {
+    color: rgba(225, 225, 225, 0.75);
+    font-size: 1.5rem;
+    min-height: 1.5rem;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#current-operand {
+    min-height: 2.5rem;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.calculator button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid #333;
+    outline: none;
+    background-color: rgba(225, 225, 225, 0.75);
+    padding: 20px;
+}
+
+.calculator button:hover {
+    background-color: rgba(225, 225, 225, 0.9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+.operator {
+    background-color: #ff9500;
+    color: white;
+}
+
+.operator:hover {
+    background-color: #ffb04d;
+}
+
+#equals {
+    background-color: #2196f3;
+}
+
+#equals:hover {
+    background-color: #2196f6;
+}
+
+#clear, #delete {
+    background-color: #f44336;
+    color: white;
+}
+
+#clear:hover, #delete:hover {
+    background-color: #ef9a9a;
+    color: white;
+}
